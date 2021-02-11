@@ -18,8 +18,15 @@
 // ```
 // Update the class definition so the example code runs as shown.
 
-function Parrot(/*...*/) {
-  //...
+// Using strictly ES5 syntax 
+function Parrot(name="A nameless parrot") {
+  this.name = name;
+}
+
+Parrot.prototype = {
+  speak: function() {
+    return(this.name + " want a cracker!");
+  }
 }
 
 module.exports = Parrot;
